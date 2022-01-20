@@ -5,7 +5,7 @@ $color_secondaire: #FF79DA;
 $color_tertiaire: #99E2D0;
 
 body{
-    max-width: 400px;
+    max-width: 500px;
     margin: 0;
 }
 header img{
@@ -161,5 +161,31 @@ nav{
         height: 250px;
         text-decoration: none;
         color: black;
+    }
+}
+footer{
+    font-family: $font_texte;
+    background-color: #313131;
+    color: white;
+    height: 200px;
+    h2{
+        font-family: $font_titre;
+        font-size: 18px;
+        padding-top: 20px;
+        padding-left: 40px;
+    }
+    ul{
+        list-style: none;
+        a{
+            text-decoration: none;
+            color: white;
+            
+        }
+        li{
+            padding-bottom: 10px;
+        }
+        i{
+            padding-right: 5px;
+        }
     }
 }
