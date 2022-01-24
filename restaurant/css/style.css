@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   max-width: 500px;
   margin: 0;
@@ -21,6 +22,111 @@ header a {
   color: black;
   font-size: 20px;
   margin-left: 30px;
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  z-index: 1;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main {
+  background-color: #e4e2e2;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  margin-top: 250px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+main .titre {
+  width: 90%;
+  margin: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+}
+main .entrées, main .plats, main .desserts {
+  width: 100%;
+  margin-top: 30px;
+}
+main .entrées h2, main .plats h2, main .desserts h2 {
+  font-weight: 200;
+  margin-left: 2%;
+  display: inline;
+  border-bottom: 3px solid #99E2D0;
+}
+main .entrées .selection, main .plats .selection, main .desserts .selection {
+  width: 96%;
+  height: 60px;
+  margin: 20px 2% 0px 2%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-between;
+  border-radius: 15px;
+}
+main .entrées h3, main .plats h3, main .desserts h3 {
+  margin: 0px 10px;
+}
+main .entrées .commentaire, main .plats .commentaire, main .desserts .commentaire {
+  display: flex;
+  justify-content: space-between;
+}
+main .entrées .commentaire p, main .plats .commentaire p, main .desserts .commentaire p {
+  margin: 0px 10px;
+}
+main .btncom {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .btncom a {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 30px;
+  background-color: #d95de4;
+  color: white;
+  border-radius: 25px;
+}
+
+footer {
+  font-family: "Roboto", sans-serif;
+  background-color: #313131;
+  color: #dddddd;
+  height: 200px;
+  margin-top: -15px;
+}
+footer h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+footer ul {
+  list-style: none;
+}
+footer ul a {
+  text-decoration: none;
+  color: white;
+}
+footer ul li {
+  padding-bottom: 10px;
+}
+footer ul i {
+  padding-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
