@@ -3,20 +3,76 @@ $font_texte: 'Roboto', sans-serif;
 $color_primaire: #9356DC;
 $color_secondaire: #FF79DA;
 $color_tertiaire: #99E2D0;
+$breakpoints:(
+    tablette: 500px,
+    desktop: 900px
+);
+@mixin tablette{
+    @media screen  and (min-width: map-get($breakpoints,tablette)){
+        @content;
+    }
+}
+@mixin desktop{
+    @media screen  and (min-width: map-get($breakpoints,desktop)){
+        @content;
+    }
+}
 
 body{
     max-width: 500px;
     margin: 0;
+    @include tablette{
+        max-width: 900px;
+    }
+    @include desktop{
+        max-width: 2000px;
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+header{
+    @include desktop{
+        width: 100%;
+    }
 }
 header img{
     width: 40%;
     height: 25px;
     padding: 10px 0px;
     margin: 0% 30%;
+    @include tablette{
+        width: 40%;
+        height: 80px;
+        padding: 10px 0px;
+        margin: 0% 30%;
+    }
+    @include desktop{
+        width: 40%;
+        height: 100px;
+        padding: 10px 0px;
+        margin: 0% 30%;
+    }
+}
+.desktop{
+    @include tablette{
+        display: flex;
+    }
+    @include desktop{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+    }
 }
 nav{
     background-color: rgb(245, 245, 245);
     height: 350px;
+    @include tablette{
+        width: 50%;
+    }
+    @include desktop{
+        width: 100%;
+    }
 }
 .ville{
     display: flex;
@@ -61,13 +117,28 @@ nav{
     color: white;
     font-weight: bold;
 }
+.fonction{
+    @include tablette{
+        width: 50%;
+    }
+    @include desktop{
+        width: 100%;
+    }
+}
 .fonctionnement{
     font-family: $font_texte;
     h2{
         margin-left: 25px;
+        @include tablette{
+            text-align: center;
+        }
+        @include desktop{
+            text-align: start;
+        }
     }
     ul{
         list-style: none;
+       
     }
     li{
         width: 95%;
@@ -108,9 +179,35 @@ nav{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    @include tablette{
+        padding: 0px;
+    }
+    @include desktop{
+        padding: 0px;
+    }
     h2{
         margin-left: -230px;
         padding-bottom: 20px;
+        @include tablette{
+            font-size: 25px;
+            margin-left: 40px;
+            margin-right: 0px;
+            width: 20%;
+        }
+        @include desktop{
+            font-size: 25px;
+            text-align: center;
+            width: 20%;
+            margin-left: 0px;
+        }
+    }
+    @include tablette{
+        width: 100%;
+        height: 650px;
+    }
+    @include desktop{
+        width: 70%;
+        height: 700px;
     }
 }
 .resto{
@@ -120,6 +217,20 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include tablette{
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: space-around;
+    }
+    @include desktop{
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: space-around;
+    }
     .imageresto{
         width: 100%;
         height: 70%;
@@ -161,6 +272,12 @@ nav{
         height: 250px;
         text-decoration: none;
         color: black;
+        @include tablette{
+            width: 40%;
+        }
+        @include desktop{
+            width: 40%;
+        }
     }
 }
 footer{
@@ -168,18 +285,46 @@ footer{
     background-color: #313131;
     color: rgb(221, 221, 221);
     height: 200px;
+    margin-top: -20px;
+    @include tablette{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+    }
+    @include desktop{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+    }
     h2{
         font-family: $font_titre;
         font-size: 18px;
         padding-top: 20px;
         padding-left: 40px;
+        @include desktop{
+            font-size: 25px;
+        }
     }
     ul{
         list-style: none;
+        @include tablette{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 0px;
+        }
+        @include desktop{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
         a{
             text-decoration: none;
             color: white;
-            
         }
         li{
             padding-bottom: 10px;
