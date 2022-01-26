@@ -135,7 +135,6 @@ main .entrées .selection, main .plats .selection, main .desserts .selection {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: space-between;
   border-radius: 15px;
 }
 main .entrées .selection a, main .plats .selection a, main .desserts .selection a {

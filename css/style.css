@@ -244,7 +244,6 @@ nav {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: space-around;
   }
 }
 @media screen and (min-width: 900px) {
@@ -253,7 +252,6 @@ nav {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: space-around;
   }
 }
 .resto .imageresto {
@@ -288,6 +286,9 @@ nav {
   padding: 0px 5%;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+.resto .info .coeurplein {
+  color: #9356DC;
 }
 .resto i {
   font-size: 20px;
