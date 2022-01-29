@@ -1,4 +1,14 @@
 @charset "UTF-8";
+@keyframes plats {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 body {
   max-width: 500px;
   margin: 0;
@@ -126,7 +136,7 @@ main .entrées h2, main .plats h2, main .desserts h2 {
   display: inline;
   border-bottom: 3px solid #99E2D0;
 }
-main .entrées .selection, main .plats .selection, main .desserts .selection {
+main .entrées .selection1, main .entrées .selection2, main .entrées .selection3, main .entrées .selection4, main .plats .selection1, main .plats .selection2, main .plats .selection3, main .plats .selection4, main .desserts .selection1, main .desserts .selection2, main .desserts .selection3, main .desserts .selection4 {
   width: 96%;
   height: 60px;
   margin: 20px 2% 0px 2%;
@@ -137,19 +147,61 @@ main .entrées .selection, main .plats .selection, main .desserts .selection {
   justify-content: center;
   border-radius: 15px;
 }
-main .entrées .selection a, main .plats .selection a, main .desserts .selection a {
+main .entrées .selection1 a, main .entrées .selection2 a, main .entrées .selection3 a, main .entrées .selection4 a, main .plats .selection1 a, main .plats .selection2 a, main .plats .selection3 a, main .plats .selection4 a, main .desserts .selection1 a, main .desserts .selection2 a, main .desserts .selection3 a, main .desserts .selection4 a {
+  width: 100%;
   text-decoration: none;
   color: black;
-}
-main .entrées h3, main .plats h3, main .desserts h3 {
-  margin: 0px 10px;
-}
-main .entrées .commentaire, main .plats .commentaire, main .desserts .commentaire {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-main .entrées .commentaire p, main .plats .commentaire p, main .desserts .commentaire p {
-  margin: 0px 10px;
+main .entrées .selection1 a:hover .choix, main .entrées .selection2 a:hover .choix, main .entrées .selection3 a:hover .choix, main .entrées .selection4 a:hover .choix, main .plats .selection1 a:hover .choix, main .plats .selection2 a:hover .choix, main .plats .selection3 a:hover .choix, main .plats .selection4 a:hover .choix, main .desserts .selection1 a:hover .choix, main .desserts .selection2 a:hover .choix, main .desserts .selection3 a:hover .choix, main .desserts .selection4 a:hover .choix {
+  transform: translateX(0px);
+  visibility: visible;
+  width: 80px;
+  transition-duration: 1000ms;
+  transform-origin: right;
+}
+main .entrées .selection1 a:hover .choix i, main .entrées .selection2 a:hover .choix i, main .entrées .selection3 a:hover .choix i, main .entrées .selection4 a:hover .choix i, main .plats .selection1 a:hover .choix i, main .plats .selection2 a:hover .choix i, main .plats .selection3 a:hover .choix i, main .plats .selection4 a:hover .choix i, main .desserts .selection1 a:hover .choix i, main .desserts .selection2 a:hover .choix i, main .desserts .selection3 a:hover .choix i, main .desserts .selection4 a:hover .choix i {
+  transform: rotate(1turn);
+  transition-duration: 1000ms;
+}
+main .entrées .selection1 a .intitule, main .entrées .selection2 a .intitule, main .entrées .selection3 a .intitule, main .entrées .selection4 a .intitule, main .plats .selection1 a .intitule, main .plats .selection2 a .intitule, main .plats .selection3 a .intitule, main .plats .selection4 a .intitule, main .desserts .selection1 a .intitule, main .desserts .selection2 a .intitule, main .desserts .selection3 a .intitule, main .desserts .selection4 a .intitule {
+  width: 100%;
+  height: 98%;
+  padding-left: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main .entrées .selection1 a .commentaire, main .entrées .selection2 a .commentaire, main .entrées .selection3 a .commentaire, main .entrées .selection4 a .commentaire, main .plats .selection1 a .commentaire, main .plats .selection2 a .commentaire, main .plats .selection3 a .commentaire, main .plats .selection4 a .commentaire, main .desserts .selection1 a .commentaire, main .desserts .selection2 a .commentaire, main .desserts .selection3 a .commentaire, main .desserts .selection4 a .commentaire {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: -10px;
+}
+main .entrées .selection1 a h3, main .entrées .selection2 a h3, main .entrées .selection3 a h3, main .entrées .selection4 a h3, main .plats .selection1 a h3, main .plats .selection2 a h3, main .plats .selection3 a h3, main .plats .selection4 a h3, main .desserts .selection1 a h3, main .desserts .selection2 a h3, main .desserts .selection3 a h3, main .desserts .selection4 a h3 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: -15px;
+}
+main .entrées .selection1 a .prix, main .entrées .selection2 a .prix, main .entrées .selection3 a .prix, main .entrées .selection4 a .prix, main .plats .selection1 a .prix, main .plats .selection2 a .prix, main .plats .selection3 a .prix, main .plats .selection4 a .prix, main .desserts .selection1 a .prix, main .desserts .selection2 a .prix, main .desserts .selection3 a .prix, main .desserts .selection4 a .prix {
+  margin-right: 10px;
+}
+main .entrées .selection1 a .choix, main .entrées .selection2 a .choix, main .entrées .selection3 a .choix, main .entrées .selection4 a .choix, main .plats .selection1 a .choix, main .plats .selection2 a .choix, main .plats .selection3 a .choix, main .plats .selection4 a .choix, main .desserts .selection1 a .choix, main .desserts .selection2 a .choix, main .desserts .selection3 a .choix, main .desserts .selection4 a .choix {
+  width: 0px;
+  visibility: hidden;
+  height: 130%;
+  color: white;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 main .btncom {
   width: 100%;
@@ -165,6 +217,73 @@ main .btncom a {
   background-color: #d95de4;
   color: white;
   border-radius: 25px;
+}
+main .btncom a:hover {
+  background-color: #FF79DA;
+  box-shadow: 3px 3px rgba(187, 64, 187, 0.781);
+}
+
+.entrées h2 {
+  animation: plats 700ms 400ms;
+  animation-fill-mode: backwards;
+}
+.entrées .selection1 {
+  animation: plats 700ms 800ms;
+  animation-fill-mode: backwards;
+}
+.entrées .selection2 {
+  animation: plats 700ms 1200ms;
+  animation-fill-mode: backwards;
+}
+.entrées .selection3 {
+  animation: plats 700ms 1600ms;
+  animation-fill-mode: backwards;
+}
+.entrées .selection4 {
+  animation: plats 700ms 2000ms;
+  animation-fill-mode: backwards;
+}
+
+.plats h2 {
+  animation: plats 700ms 2400ms;
+  animation-fill-mode: backwards;
+}
+.plats .selection1 {
+  animation: plats 700ms 2800ms;
+  animation-fill-mode: backwards;
+}
+.plats .selection2 {
+  animation: plats 700ms 3200ms;
+  animation-fill-mode: backwards;
+}
+.plats .selection3 {
+  animation: plats 700ms 3600ms;
+  animation-fill-mode: backwards;
+}
+.plats .selection4 {
+  animation: plats 700ms 4000ms;
+  animation-fill-mode: backwards;
+}
+
+.desserts h2 {
+  animation: plats 700ms 4400ms;
+  animation-fill-mode: backwards;
+}
+.desserts .selection1 {
+  animation: plats 700ms 4800ms;
+  animation-fill-mode: backwards;
+}
+.desserts .selection2 {
+  animation: plats 700ms 5200ms;
+  animation-fill-mode: backwards;
+}
+.desserts .selection3 {
+  animation: plats 700ms 5600ms;
+  animation-fill-mode: backwards;
+}
+.desserts .selection4 {
+  animation: plats 700ms 6000ms;
+  animation-fill-mode: backwards;
 }
 
 footer {

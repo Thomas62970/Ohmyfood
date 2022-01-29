@@ -17,10 +17,29 @@ $breakpoints:(
         @content;
     }
 }
+@keyframes loader{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(2);
+    }
+}
+@keyframes loading{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        height: 0px;
+    }
+}
+
 
 body{
     max-width: 500px;
     margin: 0;
+    padding: 0;
     @include tablette{
         max-width: 900px;
     }
@@ -31,6 +50,34 @@ body{
         flex-wrap: wrap;
     }
 }
+.loading{
+    width: 100%;
+    height: 100vh;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #6d0000;
+    animation-name: loading;
+    animation-delay: 9s;
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+}
+.mot1{
+    color: $color_primaire;
+    animation: loader 2800ms 3;
+}
+
+.mot2{
+    color: $color_secondaire;
+    animation: loader 2800ms 100ms 3;
+}
+.mot3{
+    color: $color_tertiaire;
+    animation: loader 2800ms 200ms 3;
+}
+
 header{
     @include desktop{
         width: 100%;
@@ -69,9 +116,11 @@ nav{
     height: 350px;
     @include tablette{
         width: 50%;
+        padding-bottom: 50px;
     }
     @include desktop{
         width: 100%;
+        padding-bottom: 0px;
     }
 }
 .ville{
@@ -83,6 +132,12 @@ nav{
     font-size: 15px;
     box-shadow:inset 0px 3px 3px rgb(202, 202, 202);
     background-color: rgb(233, 231, 231);
+    @include tablette{
+        width: 200%;
+    }
+    @include desktop{
+        width: 100%;
+    }
     i{
         padding-right: 15px;
     }
@@ -116,13 +171,20 @@ nav{
     text-decoration: none;
     color: white;
     font-weight: bold;
+    &:hover{
+        background-color: $color_secondaire;
+        box-shadow: 4px 4px 4px rgba(187, 64, 187, 0.781);
+    }
 }
 .fonction{
     @include tablette{
         width: 50%;
+        margin-top: 50px;
+        background-color: rgb(245, 245, 245);
     }
     @include desktop{
         width: 100%;
+        margin-top: 0px;
     }
 }
 .fonctionnement{
@@ -263,8 +325,12 @@ nav{
        padding: 0px 5%;
        border-bottom-left-radius: 20px;
        border-bottom-right-radius: 20px;
+       .coeurvide{
+           margin-bottom: -33px;
+       }
        .coeurplein{
            color: $color_primaire;
+           visibility: hidden;
        }
     }
     i{
@@ -275,6 +341,14 @@ nav{
         height: 250px;
         text-decoration: none;
         color: black;
+        .coeur:hover{
+            .coeurvide{
+                display: none;
+            }
+            .coeurplein{
+                visibility: visible;
+            }
+        }
         @include tablette{
             width: 40%;
         }

@@ -3,6 +3,16 @@ $font_texte: 'Roboto', sans-serif;
 $color_primaire: #9356DC;
 $color_secondaire: #FF79DA;
 $color_tertiaire: #99E2D0;
+@keyframes plats{
+    from{
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 $breakpoints:(
     tablette: 500px,
     desktop: 900px
@@ -121,7 +131,7 @@ main{
             display: inline;
             border-bottom: 3px solid $color_tertiaire;
         }
-        .selection{
+        .selection1, .selection2, .selection3, .selection4{
             width: 96%;
             height: 60px;
             margin: 20px 2% 0px 2%;
@@ -132,19 +142,62 @@ main{
             justify-content: center;
             border-radius: 15px;
             a{
+                width: 100%;
                 text-decoration: none;
-                color:black;
-            }
-        }
-        h3{
-            margin: 0px 10px;
-        }
-        .commentaire{
-            display: flex;
-            justify-content: space-between;
-            p{
-                margin: 0px 10px;
-                
+                color: black;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &:hover{
+                    .choix{
+                        transform: translateX(0px);
+                        visibility: visible;
+                        width: 80px;
+                        transition-duration: 1000ms;
+                        transform-origin: right;
+                        i{
+                            transform: rotate(1turn);
+                            transition-duration: 1000ms;
+                        }
+                    }
+                }
+                .intitule{
+                    width: 100%;
+                    height: 98%;
+                    padding-left: 8px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                .commentaire{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0px;
+                    margin: 0px;
+                    margin-bottom: -10px;
+                }
+                h3{
+                    padding: 0;
+                    margin: 0;
+                    margin-bottom: -15px;
+                }
+                .prix{
+                    margin-right:10px ;
+                }
+                .choix{
+                    width: 0px;
+                    visibility: hidden;
+                    height: 130%;
+                    color: white;
+                    background-color: $color_tertiaire;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 22px;
+                    border-top-right-radius: 15px ;
+                    border-bottom-right-radius: 15px;
+                }
             }
         }
     }
@@ -161,7 +214,77 @@ main{
             background-color: #d95de4;
             color: white;
             border-radius: 25px;
+            &:hover{
+                background-color: $color_secondaire;
+                box-shadow: 3px 3px rgba(187, 64, 187, 0.781);
+            }
         }
+    }
+}
+.entrées{
+    h2{
+        animation: plats 700ms 400ms;
+        animation-fill-mode: backwards;
+    }
+    .selection1{
+        animation: plats 700ms 800ms;
+        animation-fill-mode: backwards;
+    }
+    .selection2{
+        animation: plats 700ms 1200ms;
+        animation-fill-mode: backwards;
+    }
+    .selection3{
+        animation: plats 700ms 1600ms;
+        animation-fill-mode: backwards;
+    }
+    .selection4{
+        animation: plats 700ms 2000ms;
+        animation-fill-mode: backwards;
+    }
+}
+.plats{
+    h2{
+        animation: plats 700ms 2400ms;
+        animation-fill-mode: backwards;
+    }
+    .selection1{
+        animation: plats 700ms 2800ms;
+        animation-fill-mode: backwards;
+    }
+    .selection2{
+        animation: plats 700ms 3200ms;
+        animation-fill-mode: backwards;
+    }
+    .selection3{
+        animation: plats 700ms 3600ms;
+        animation-fill-mode: backwards;
+    }
+    .selection4{
+        animation: plats 700ms 4000ms;
+        animation-fill-mode: backwards;
+    }
+}
+.desserts{
+    h2{
+        animation: plats 700ms 4400ms;
+        animation-fill-mode: backwards;
+    }
+    .selection1{
+        animation: plats 700ms 4800ms;
+        animation-fill-mode: backwards;
+    }
+    .selection2{
+        animation: plats 700ms 5200ms;
+        animation-fill-mode: backwards;
+    }
+    .selection3{
+        animation: plats 700ms 5600ms;
+        animation-fill-mode: backwards;
+    }
+    .selection4{
+        animation: plats 700ms 6000ms;
+        animation-fill-mode: backwards;
     }
 }
 footer{

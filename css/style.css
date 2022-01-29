@@ -1,6 +1,24 @@
+@keyframes loader {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    height: 0px;
+  }
+}
 body {
   max-width: 500px;
   margin: 0;
+  padding: 0;
 }
 @media screen and (min-width: 500px) {
   body {
@@ -14,6 +32,36 @@ body {
     display: flex;
     flex-wrap: wrap;
   }
+}
+
+.loading {
+  width: 100%;
+  height: 100vh;
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #6d0000;
+  animation-name: loading;
+  animation-delay: 9s;
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+}
+
+.mot1 {
+  color: #9356DC;
+  animation: loader 2800ms 3;
+}
+
+.mot2 {
+  color: #FF79DA;
+  animation: loader 2800ms 100ms 3;
+}
+
+.mot3 {
+  color: #99E2D0;
+  animation: loader 2800ms 200ms 3;
 }
 
 @media screen and (min-width: 900px) {
@@ -65,11 +113,13 @@ nav {
 @media screen and (min-width: 500px) {
   nav {
     width: 50%;
+    padding-bottom: 50px;
   }
 }
 @media screen and (min-width: 900px) {
   nav {
     width: 100%;
+    padding-bottom: 0px;
   }
 }
 
@@ -82,6 +132,16 @@ nav {
   font-size: 15px;
   box-shadow: inset 0px 3px 3px #cacaca;
   background-color: #e9e7e7;
+}
+@media screen and (min-width: 500px) {
+  .ville {
+    width: 200%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .ville {
+    width: 100%;
+  }
 }
 .ville i {
   padding-right: 15px;
@@ -118,15 +178,22 @@ nav {
   color: white;
   font-weight: bold;
 }
+.btnnav:hover {
+  background-color: #FF79DA;
+  box-shadow: 4px 4px 4px rgba(187, 64, 187, 0.781);
+}
 
 @media screen and (min-width: 500px) {
   .fonction {
     width: 50%;
+    margin-top: 50px;
+    background-color: whitesmoke;
   }
 }
 @media screen and (min-width: 900px) {
   .fonction {
     width: 100%;
+    margin-top: 0px;
   }
 }
 
@@ -287,8 +354,12 @@ nav {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+.resto .info .coeurvide {
+  margin-bottom: -33px;
+}
 .resto .info .coeurplein {
   color: #9356DC;
+  visibility: hidden;
 }
 .resto i {
   font-size: 20px;
@@ -298,6 +369,12 @@ nav {
   height: 250px;
   text-decoration: none;
   color: black;
+}
+.resto a .coeur:hover .coeurvide {
+  display: none;
+}
+.resto a .coeur:hover .coeurplein {
+  visibility: visible;
 }
 @media screen and (min-width: 500px) {
   .resto a {
