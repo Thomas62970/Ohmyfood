@@ -9,6 +9,14 @@
     opacity: 1;
   }
 }
+@keyframes trait {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 body {
   max-width: 500px;
   margin: 0;
@@ -89,6 +97,7 @@ header a {
 main {
   background-color: #e4e2e2;
   width: 100%;
+  font-family: "Roboto", sans-serif;
   position: relative;
   z-index: 2;
   margin-top: 250px;
@@ -106,6 +115,7 @@ main {
 main .titre {
   width: 90%;
   margin: 10px 20px;
+  letter-spacing: 1px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -134,7 +144,22 @@ main .entrées h2, main .plats h2, main .desserts h2 {
   font-weight: 200;
   margin-left: 2%;
   display: inline;
-  border-bottom: 3px solid #99E2D0;
+}
+main .entrées .trait, main .plats .trait, main .desserts .trait {
+  margin-left: 2.5%;
+  width: 60px;
+  border-top: 3px solid #99E2D0;
+  animation: trait 800ms 4500ms both;
+}
+@media screen and (min-width: 500px) {
+  main .entrées .trait, main .plats .trait, main .desserts .trait {
+    margin-left: 2%;
+  }
+}
+@media screen and (min-width: 900px) {
+  main .entrées .trait, main .plats .trait, main .desserts .trait {
+    margin-left: 10px;
+  }
 }
 main .entrées .selection1, main .entrées .selection2, main .entrées .selection3, main .entrées .selection4, main .plats .selection1, main .plats .selection2, main .plats .selection3, main .plats .selection4, main .desserts .selection1, main .desserts .selection2, main .desserts .selection3, main .desserts .selection4 {
   width: 96%;
@@ -214,13 +239,14 @@ main .btncom a {
   text-decoration: none;
   font-size: 18px;
   padding: 10px 30px;
+  box-shadow: 2px 2px 2px #cecccc;
   background-color: #d95de4;
   color: white;
   border-radius: 25px;
 }
 main .btncom a:hover {
   background-color: #FF79DA;
-  box-shadow: 3px 3px rgba(187, 64, 187, 0.781);
+  box-shadow: 4px 4px 4px rgba(187, 64, 187, 0.781);
 }
 
 .entrées h2 {

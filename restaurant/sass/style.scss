@@ -27,6 +27,14 @@ $breakpoints:(
         @content;
     }
 }
+@keyframes trait{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 
 body{
     max-width: 500px;
@@ -91,6 +99,7 @@ header{
 main{
     background-color: rgb(228, 226, 226);
     width: 100%;
+    font-family: $font_texte;
     position: relative;
     z-index: 2;
     margin-top: 250px;
@@ -105,6 +114,7 @@ main{
     .titre{
         width: 90%;
         margin: 10px 20px;
+        letter-spacing: 1px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -129,7 +139,18 @@ main{
             font-weight: 200;
             margin-left: 2%;
             display: inline;
-            border-bottom: 3px solid $color_tertiaire;
+        }
+        .trait{
+            margin-left: 2.5%;
+            width: 60px;
+            border-top: 3px solid $color_tertiaire;
+            animation: trait 800ms 4500ms both;
+            @include tablette{
+                margin-left: 2%;
+            }
+            @include desktop{
+                margin-left: 10px;
+            }
         }
         .selection1, .selection2, .selection3, .selection4{
             width: 96%;
@@ -211,12 +232,13 @@ main{
             text-decoration: none;
             font-size: 18px;
             padding: 10px 30px;
+            box-shadow: 2px 2px 2px rgb(206, 204, 204);
             background-color: #d95de4;
             color: white;
             border-radius: 25px;
             &:hover{
                 background-color: $color_secondaire;
-                box-shadow: 3px 3px rgba(187, 64, 187, 0.781);
+        box-shadow: 4px 4px 4px rgba(187, 64, 187, 0.781);
             }
         }
     }
