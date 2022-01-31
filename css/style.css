@@ -266,7 +266,8 @@ nav {
   }
 }
 .lesresto h2 {
-  margin-left: -230px;
+  width: 90%;
+  text-align: start;
   padding-bottom: 20px;
 }
 @media screen and (min-width: 500px) {
