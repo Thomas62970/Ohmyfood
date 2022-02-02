@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @keyframes plats {
   from {
-    transform: translateY(200px);
+    transform: translateY(50px);
     opacity: 0;
   }
   to {
@@ -149,7 +149,7 @@ main .entrées .trait, main .plats .trait, main .desserts .trait {
   margin-left: 2.5%;
   width: 60px;
   border-top: 3px solid #99E2D0;
-  animation: trait 800ms 4500ms both;
+  animation: trait 400ms 3000ms both;
 }
 @media screen and (min-width: 500px) {
   main .entrées .trait, main .plats .trait, main .desserts .trait {
@@ -250,65 +250,65 @@ main .btncom a:hover {
 }
 
 .entrées h2 {
-  animation: plats 700ms 400ms;
+  animation: plats 400ms 200ms;
   animation-fill-mode: backwards;
 }
 .entrées .selection1 {
-  animation: plats 700ms 800ms;
+  animation: plats 400ms 400ms;
   animation-fill-mode: backwards;
 }
 .entrées .selection2 {
-  animation: plats 700ms 1200ms;
+  animation: plats 400ms 600ms;
   animation-fill-mode: backwards;
 }
 .entrées .selection3 {
-  animation: plats 700ms 1600ms;
+  animation: plats 400ms 800ms;
   animation-fill-mode: backwards;
 }
 .entrées .selection4 {
-  animation: plats 700ms 2000ms;
+  animation: plats 400ms 1000ms;
   animation-fill-mode: backwards;
 }
 
 .plats h2 {
-  animation: plats 700ms 2400ms;
+  animation: plats 400ms 1200ms;
   animation-fill-mode: backwards;
 }
 .plats .selection1 {
-  animation: plats 700ms 2800ms;
+  animation: plats 400ms 1400ms;
   animation-fill-mode: backwards;
 }
 .plats .selection2 {
-  animation: plats 700ms 3200ms;
+  animation: plats 400ms 1600ms;
   animation-fill-mode: backwards;
 }
 .plats .selection3 {
-  animation: plats 700ms 3600ms;
+  animation: plats 400ms 1800ms;
   animation-fill-mode: backwards;
 }
 .plats .selection4 {
-  animation: plats 700ms 4000ms;
+  animation: plats 400ms 2000ms;
   animation-fill-mode: backwards;
 }
 
 .desserts h2 {
-  animation: plats 700ms 4400ms;
+  animation: plats 400ms 2200ms;
   animation-fill-mode: backwards;
 }
 .desserts .selection1 {
-  animation: plats 700ms 4800ms;
+  animation: plats 400ms 2400ms;
   animation-fill-mode: backwards;
 }
 .desserts .selection2 {
-  animation: plats 700ms 5200ms;
+  animation: plats 400ms 2600ms;
   animation-fill-mode: backwards;
 }
 .desserts .selection3 {
-  animation: plats 700ms 5600ms;
+  animation: plats 400ms 2800ms;
   animation-fill-mode: backwards;
 }
 .desserts .selection4 {
-  animation: plats 700ms 6000ms;
+  animation: plats 400ms 3000ms;
   animation-fill-mode: backwards;
 }
 
