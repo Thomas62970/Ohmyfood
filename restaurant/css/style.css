@@ -201,16 +201,28 @@ main .entrées .selection1 a .intitule, main .entrées .selection2 a .intitule, 
 }
 main .entrées .selection1 a .commentaire, main .entrées .selection2 a .commentaire, main .entrées .selection3 a .commentaire, main .entrées .selection4 a .commentaire, main .plats .selection1 a .commentaire, main .plats .selection2 a .commentaire, main .plats .selection3 a .commentaire, main .plats .selection4 a .commentaire, main .desserts .selection1 a .commentaire, main .desserts .selection2 a .commentaire, main .desserts .selection3 a .commentaire, main .desserts .selection4 a .commentaire {
   width: 100%;
+  font-size: 14px;
   display: flex;
   justify-content: space-between;
   padding: 0px;
   margin: 0px;
   margin-bottom: -10px;
 }
+main .entrées .selection1 a .commentaire .com, main .entrées .selection2 a .commentaire .com, main .entrées .selection3 a .commentaire .com, main .entrées .selection4 a .commentaire .com, main .plats .selection1 a .commentaire .com, main .plats .selection2 a .commentaire .com, main .plats .selection3 a .commentaire .com, main .plats .selection4 a .commentaire .com, main .desserts .selection1 a .commentaire .com, main .desserts .selection2 a .commentaire .com, main .desserts .selection3 a .commentaire .com, main .desserts .selection4 a .commentaire .com {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 main .entrées .selection1 a h3, main .entrées .selection2 a h3, main .entrées .selection3 a h3, main .entrées .selection4 a h3, main .plats .selection1 a h3, main .plats .selection2 a h3, main .plats .selection3 a h3, main .plats .selection4 a h3, main .desserts .selection1 a h3, main .desserts .selection2 a h3, main .desserts .selection3 a h3, main .desserts .selection4 a h3 {
+  font-size: 17px;
   padding: 0;
   margin: 0;
-  margin-bottom: -15px;
+  margin-bottom: -10px;
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .entrées .selection1 a .prix, main .entrées .selection2 a .prix, main .entrées .selection3 a .prix, main .entrées .selection4 a .prix, main .plats .selection1 a .prix, main .plats .selection2 a .prix, main .plats .selection3 a .prix, main .plats .selection4 a .prix, main .desserts .selection1 a .prix, main .desserts .selection2 a .prix, main .desserts .selection3 a .prix, main .desserts .selection4 a .prix {
   margin-right: 10px;
@@ -218,7 +230,7 @@ main .entrées .selection1 a .prix, main .entrées .selection2 a .prix, main .en
 main .entrées .selection1 a .choix, main .entrées .selection2 a .choix, main .entrées .selection3 a .choix, main .entrées .selection4 a .choix, main .plats .selection1 a .choix, main .plats .selection2 a .choix, main .plats .selection3 a .choix, main .plats .selection4 a .choix, main .desserts .selection1 a .choix, main .desserts .selection2 a .choix, main .desserts .selection3 a .choix, main .desserts .selection4 a .choix {
   width: 0px;
   visibility: hidden;
-  height: 130%;
+  height: 135%;
   color: white;
   background-color: #99E2D0;
   display: flex;
