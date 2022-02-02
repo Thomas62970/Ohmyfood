@@ -1,6 +1,77 @@
+@keyframes loader {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    height: 0px;
+  }
+}
 body {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0;
+  padding: 0;
+  position: relative;
+}
+@media screen and (min-width: 500px) {
+  body {
+    max-width: 900px;
+  }
+}
+@media screen and (min-width: 900px) {
+  body {
+    max-width: 2000px;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  font-family: "Shrikhand", cursive;
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: whitesmoke;
+  animation-name: loading;
+  animation-delay: 3s;
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+}
+
+.mot1 {
+  color: #9356DC;
+  animation: loader 900ms 3;
+}
+
+.mot2 {
+  color: #FF79DA;
+  animation: loader 900ms 100ms 3;
+}
+
+.mot3 {
+  color: #99E2D0;
+  animation: loader 900ms 200ms 3;
+}
+
+@media screen and (min-width: 900px) {
+  header {
+    width: 100%;
+  }
 }
 
 header img {
@@ -9,10 +80,51 @@ header img {
   padding: 10px 0px;
   margin: 0% 30%;
 }
+@media screen and (min-width: 500px) {
+  header img {
+    width: 40%;
+    height: 80px;
+    padding: 10px 0px;
+    margin: 0% 30%;
+  }
+}
+@media screen and (min-width: 900px) {
+  header img {
+    width: 40%;
+    height: 100px;
+    padding: 10px 0px;
+    margin: 0% 30%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .desktop {
+    display: flex;
+  }
+}
+@media screen and (min-width: 900px) {
+  .desktop {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 nav {
   background-color: whitesmoke;
   height: 350px;
+}
+@media screen and (min-width: 500px) {
+  nav {
+    width: 50%;
+    padding-bottom: 50px;
+  }
+}
+@media screen and (min-width: 900px) {
+  nav {
+    width: 100%;
+    padding-bottom: 0px;
+  }
 }
 
 .ville {
@@ -24,6 +136,16 @@ nav {
   font-size: 15px;
   box-shadow: inset 0px 3px 3px #cacaca;
   background-color: #e9e7e7;
+}
+@media screen and (min-width: 500px) {
+  .ville {
+    width: 200%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .ville {
+    width: 100%;
+  }
 }
 .ville i {
   padding-right: 15px;
@@ -60,12 +182,40 @@ nav {
   color: white;
   font-weight: bold;
 }
+.btnnav:hover {
+  background-color: #FF79DA;
+  box-shadow: 4px 4px 4px rgba(187, 64, 187, 0.781);
+}
+
+@media screen and (min-width: 500px) {
+  .fonction {
+    width: 50%;
+    margin-top: 50px;
+    background-color: whitesmoke;
+  }
+}
+@media screen and (min-width: 900px) {
+  .fonction {
+    width: 100%;
+    margin-top: 0px;
+  }
+}
 
 .fonctionnement {
   font-family: "Roboto", sans-serif;
 }
 .fonctionnement h2 {
   margin-left: 25px;
+}
+@media screen and (min-width: 500px) {
+  .fonctionnement h2 {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 900px) {
+  .fonctionnement h2 {
+    text-align: start;
+  }
 }
 .fonctionnement ul {
   list-style: none;
@@ -108,9 +258,48 @@ nav {
   justify-content: flex-start;
   align-items: center;
 }
+@media screen and (min-width: 500px) {
+  .lesresto {
+    padding: 0px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .lesresto {
+    padding: 0px;
+  }
+}
 .lesresto h2 {
-  margin-left: -200px;
+  width: 90%;
+  text-align: start;
   padding-bottom: 20px;
+}
+@media screen and (min-width: 500px) {
+  .lesresto h2 {
+    font-size: 25px;
+    margin-left: 40px;
+    margin-right: 0px;
+    width: 20%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .lesresto h2 {
+    font-size: 25px;
+    text-align: center;
+    width: 20%;
+    margin-left: 0px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .lesresto {
+    width: 100%;
+    height: 650px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .lesresto {
+    width: 70%;
+    height: 700px;
+  }
 }
 
 .resto {
@@ -120,6 +309,22 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media screen and (min-width: 500px) {
+  .resto {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 900px) {
+  .resto {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 .resto .imageresto {
   width: 100%;
@@ -154,6 +359,13 @@ nav {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+.resto .info .coeurvide {
+  margin-bottom: -33px;
+}
+.resto .info .coeurplein {
+  color: #9356DC;
+  visibility: hidden;
+}
 .resto i {
   font-size: 20px;
 }
@@ -162,6 +374,87 @@ nav {
   height: 250px;
   text-decoration: none;
   color: black;
+}
+.resto a .coeur:hover .coeurvide {
+  display: none;
+}
+.resto a .coeur:hover .coeurplein {
+  visibility: visible;
+}
+@media screen and (min-width: 500px) {
+  .resto a {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .resto a {
+    width: 40%;
+  }
+}
+
+footer {
+  font-family: "Roboto", sans-serif;
+  background-color: #313131;
+  color: #dddddd;
+  height: 200px;
+  margin-top: -20px;
+}
+@media screen and (min-width: 500px) {
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 900px) {
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+  }
+}
+footer h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  padding-top: 20px;
+  padding-left: 40px;
+}
+@media screen and (min-width: 900px) {
+  footer h2 {
+    font-size: 25px;
+  }
+}
+footer ul {
+  list-style: none;
+}
+@media screen and (min-width: 500px) {
+  footer ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+  }
+}
+@media screen and (min-width: 900px) {
+  footer ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+footer ul a {
+  text-decoration: none;
+  color: white;
+}
+footer ul li {
+  padding-bottom: 10px;
+}
+footer ul i {
+  padding-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
